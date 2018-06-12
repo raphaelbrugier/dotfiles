@@ -1,0 +1,49 @@
+[include]
+    path = dotfiles-private/gitconfig
+
+[core]
+    excludesfile = ~/.gitignore_global
+	  editor = nano
+	  autocrlf = input
+	  hooksPath = ~/dotfiles-private/git/templates/hooks/
+
+[push]
+    default = simple
+
+[pull]
+    rebase = preserve
+[branch]
+
+    autosetupmerge = false
+
+[status]
+    showUntrackedFiles = all
+
+[alias]
+    st = status
+    br = branch
+    df = diff
+    ci = commit
+    co = checkout
+    # expose the local repository as a remote see: https://gist.github.com/datagrok/5080545
+    serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+
+[credential]
+    helper = cache
+
+[rerere]
+    enabled = true
+
+[rebase]
+    autosquash = true
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
+[http]
+    postBuffer = 524288000
+
+[remote "origin"]
+    prune = true
