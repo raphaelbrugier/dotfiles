@@ -1,1 +1,8 @@
+brew "git", args: ["without-completions"]
+brew "bash"
 brew "zsh"
+
+## fonts - https://github.com/Homebrew/homebrew-cask-fonts
+tap "homebrew/cask-fonts"
+cask "font-inconsolata"
+cask "font-inconsolata-for-powerline"
