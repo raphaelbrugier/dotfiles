@@ -148,3 +148,7 @@ lazy_source () {
 
 
 ## zprof ## profile startup time
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/raphael/.sdkman"
+[[ -s "/Users/raphael/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/raphael/.sdkman/bin/sdkman-init.sh"
