@@ -1,6 +1,17 @@
 brew "git", args: ["without-completions"]
+brew "gcc", args: ["with-all-languages"]
 brew "bash"
 brew "zsh"
+brew "htop"
+brew "httpie"
+brew "gawk"
+brew "jq"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "unrar"
+brew "wget"
+brew "autojump"
 
 ## fonts - https://github.com/Homebrew/homebrew-cask-fonts
 tap "homebrew/cask-fonts"
