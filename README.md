@@ -13,12 +13,14 @@
     ```
 3. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
     
+
 ## Zsh && Zgen
 
     brew install zsh
     chsh -s /bin/zsh
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
     ~/dotfiles/install.sh
+
 
 ## Vim
 
@@ -32,3 +34,8 @@
     sdk install java
     sdk install maven
     
+## Python
+    
+    pip install virtualenv
+    pip install virtualenvwrapper
+    pip install awscli --upgrade --user
