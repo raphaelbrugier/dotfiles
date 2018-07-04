@@ -39,4 +39,4 @@
     pip install virtualenv
     pip install virtualenvwrapper
     pip install awscli --upgrade --user
-    pip install --user aws-sam-cli
+    pip install --upgrade --user aws-sam-cli
