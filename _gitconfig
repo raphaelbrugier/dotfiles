@@ -47,3 +47,5 @@
 
 [remote "origin"]
     prune = true
+[pager]
+    branch = false # turn off pagination when printing the branches. see https://stackoverflow.com/questions/48341920/git-branch-command-behaves-like-less
