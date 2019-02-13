@@ -1,0 +1,11 @@
+location: /Library/Backblaze.bzpkg/bzdata/bzexcluderules_editable.xml
+
+
+<!-- custom rules -->
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/node_modules/" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/target/" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/.m2" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/.npm/" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/.sdkman/" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="mac" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="users/" contains_1="/com.docker.docker/" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+
