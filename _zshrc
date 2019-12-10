@@ -68,6 +68,16 @@ if [ -d "/usr/local/opt/python/libexec/bin" ] ; then
     PATH="$HOME/Library/Python/3.7/bin:$PATH"
 fi
 
+## Golang - https://sourabhbajaj.com/mac-setup/Go/README.html
+export GOPATH=$HOME/devs/go-workspace
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+export ANDROIDTOOLSPATH=$HOME/Library/Android/sdk/platform-tools
+export PATH=$PATH:$ANDROIDTOOLSPATH
+
+## Custom binaries
 export PATH=$PATH:$HOME/bin
 
 ## zprof ## profile startup time

@@ -18,3 +18,10 @@ brew "autojump"
 tap "homebrew/cask-fonts"
 cask "font-inconsolata"
 cask "font-inconsolata-for-powerline"
+
+tap aws/tap
+brew "aws-sam-cli"
+
+# EKSCTL - https://eksctl.io/introduction/installation/
+tap weaveworks/tap
+brew weaveworks/tap/eksctl
