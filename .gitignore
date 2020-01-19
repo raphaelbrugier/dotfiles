@@ -10,3 +10,4 @@ node_modules
 npm-debug.log*
 
 .idea
+/config/karabiner/automatic_backups/

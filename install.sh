@@ -19,3 +19,7 @@ do
     ln -fs $(pwd)/$file ~/$dotfile
     chmod go-rwx $file
 done
+
+# karabiner requires to link the entire folder
+# see https://pqrs.org/osx/karabiner/document.html#configuration-file-path
+ln -s "$(pwd)/config/karabiner" ~/.config
