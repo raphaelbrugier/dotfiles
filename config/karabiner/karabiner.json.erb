@@ -9,13 +9,13 @@
   #optional_modifiers = []
   optional_modifiers = ["caps_lock","left_command","left_control","left_option","right_command","right_control","right_option"]
   remap_source_keys = [
-"grave_accent_and_tilde","1","2","4","5","6","7","8","9","0","hyphen","equal_sign",
+#"grave_accent_and_tilde", "1", "2","4","5","6","7","8","9","0","hyphen","equal_sign",
 "q","w","e","r","t","y","u","i","o","p","open_bracket","close_bracket","backslash",
 "a","s","d","f","g","h","j","k","l","semicolon","quote",
 "z","x","c","v","b","n","m","comma","period","slash",
 ]
   remap_dest_keys = [
-"grave_accent_and_tilde","1","2","4","5","6","7","8","9","0","open_bracket","close_bracket",
+#"grave_accent_and_tilde", "1", "2","4","5","6","7","8","9","0","open_bracket","close_bracket",
 "b","e","p","o","e","!","v","d","l","j","z","w","backslash",
 "a","u","i","e","semicolon","c","t","s","r","n","m",
 "w","y","x","semicolon","k","?", "q","g","h","f","c",
@@ -156,6 +156,91 @@
             ]
           },
           {
+            "description": "Custom typematrix bepo",
+            "manipulators": [
+              <%
+               # first row - from + no modifier
+               %>
+              {
+                "type": "basic",
+                "from": <%= from("1", [], []) %>,
+                "to": <%= to([["quote", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("2", [], []) %>,
+                "to": <%= to([["comma", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("3", [], []) %>,
+                "to": <%= to([["period", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("4", [], []) %>,
+                "to": <%= to([["9", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("5", [], []) %>,
+                "to": <%= to([["0", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("6", [], []) %>,
+                "to": <%= to([["2", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("7", [], []) %>,
+                "to": <%= to([["equal_sign", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("8", [], []) %>,
+                "to": <%= to([["hyphen", []]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("9", [], []) %>,
+                "to": <%= to([["slash", []]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("0", [], []) %>,
+                "to": <%= to([["8", ["shift"]]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("hyphen", [], []) %>,
+                "to": <%= to([["equal_sign", []]]) %>
+              },
+              {
+                "type": "basic",
+                "from": <%= from("equal_sign", [], []) %>,
+                "to": <%= to([["5", ["shift"]]]) %>
+              },
+
+              <%
+               # first row - from + shift modifier
+               %>
+              {
+                "type": "basic",
+                "from": <%= from("grave_accent_and_tilde", ["shift"], []) %>,
+                "to": <%= to([["3", ["shift"]]]) %>
+              },
+              <% for i in 0..9 do %>
+                {
+                  "type": "basic",
+                  "from": <%= from("#{i}", ["shift"], []) %>,
+                  "to": <%= to([["#{i}", []]]) %>
+                },
+              <% end %>
+              {}
+            ]
+          },
+          {
             "description": "Remap Typematrix BEPO to Mac",
             "manipulators": <%= JSON.generate(manipulators) %>
           }
@@ -173,19 +258,7 @@
           },
           "ignore": false,
           "manipulate_caps_lock_led": false,
-          "simple_modifications": [
-            {
-              "from": {
-                "key_code": "1"
-              },
-              "to": {
-                "key_code": "quote",
-                "modifiers": [
-                  "left_shift"
-                ]
-              }
-            }
-          ]
+          "simple_modifications": [ ]
         },
         {
           "disable_built_in_keyboard_if_exists": false,
