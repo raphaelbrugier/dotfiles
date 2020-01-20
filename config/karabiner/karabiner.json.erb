@@ -6,6 +6,7 @@
  require_relative './lib/erb2json.rb'
 
 
+  #optional_modifiers = []
   optional_modifiers = ["caps_lock","left_command","left_control","left_option","right_command","right_control","right_option"]
   remap_source_keys = [
 "grave_accent_and_tilde","1","2","4","5","6","7","8","9","0","hyphen","equal_sign",
@@ -15,9 +16,9 @@
 ]
   remap_dest_keys = [
 "grave_accent_and_tilde","1","2","4","5","6","7","8","9","0","open_bracket","close_bracket",
-"quote","comma","period","p","y","f","g","c","r","l","slash","equal_sign","backslash",
-"a","o","e","u","i","d","h","t","n","s","hyphen",
-"semicolon","q","j","k","x","b","m","w","v","z",
+"b","e","p","o","e","!","v","d","l","j","z","w","backslash",
+"a","u","i","e","semicolon","c","t","s","r","n","m",
+"w","y","x","semicolon","k","?", "q","g","h","f","c",
   ]
   manipulators = each_key(
       source_keys_list: remap_source_keys,
@@ -156,41 +157,7 @@
           },
           {
             "description": "Remap Typematrix BEPO to Mac",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "q"
-                },
-                "to": [
-                  {
-                    "key_code": "b"
-                  }
-                ],
-                <%= ifTypematrix %>
-              },
-              {
-                "from": {
-                  "key_code": "r"
-                },
-                "to": [
-                  {
-                    "key_code": "o"
-                  }
-                ],
-                <%= ifTypematrix %>
-              },
-              {
-                "from": {
-                  "key_code": "e"
-                },
-                "to": [
-                  {
-                    "key_code": "o"
-                  }
-                ],
-                <%= ifTypematrix %>
-              }
-            ]
+            "manipulators": <%= JSON.generate(manipulators) %>
           }
         ]
       },
