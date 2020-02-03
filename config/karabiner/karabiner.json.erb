@@ -261,6 +261,11 @@
               %>
               {
                 "type": "basic",
+                "from": <%= from("q", ["right_alt"], []) %>,
+                "to": <%= to([["backslash", ["shift"]]]) %> <% # to: |  %>
+              },
+              {
+                "type": "basic",
                 "from": <%= from("w", [], []) %>,
                 "to": <%= to([["e", ["left_alt"]]]) %>,
                 "to_after_key_up": <%= to([["e", []]]) %>

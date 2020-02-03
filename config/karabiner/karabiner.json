@@ -509,6 +509,25 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "q",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "backslash",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "w"
                 },
                 "to": [
