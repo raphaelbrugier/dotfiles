@@ -102,6 +102,25 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                      "shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "1"
                 },
                 "to": [
@@ -458,6 +477,38 @@
               {
                 "type": "basic",
                 "from": {
+                  "key_code": "4",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "5",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
                   "key_code": "w"
                 },
                 "to": [
@@ -547,6 +598,45 @@
                   {
                     "key_code": "semicolon",
                     "modifiers": []
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "2",
+                    "modifiers": [
+                      "right_alt",
+                      "right_shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_alt"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "4",
+                    "modifiers": [
+                      "shift"
+                    ]
                   }
                 ]
               },
