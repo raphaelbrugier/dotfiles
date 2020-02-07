@@ -53,6 +53,7 @@ if ! zgen saved; then
   zgen load djui/alias-tips
   zgen load zsh-users/zsh-syntax-highlighting
   zgen load zsh-users/zsh-history-substring-search
+  zgen load zsh-users/zsh-autosuggestions
 
   # generate the init script from plugins above
   zgen save
