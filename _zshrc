@@ -22,7 +22,7 @@ zsh_aws() {
 POWERLEVEL9K_CUSTOM_AWS="zsh_aws"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status time dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time custom_aws virtualenv kubecontext)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time custom_aws virtualenv)
 POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
@@ -43,7 +43,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/golang
   zgen oh-my-zsh plugins/mvn
   zgen oh-my-zsh plugins/sudo
-  zgen oh-my-zsh plugins/kubectl
+  # zgen oh-my-zsh plugins/kubectl
   ## zgen oh-my-zsh plugins/aws #slow startup
 
   #theme
