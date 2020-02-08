@@ -1,5 +1,5 @@
-brew "git", args: ["without-completions"]
-brew "gcc", args: ["with-all-languages"]
+brew "git"
+brew "gcc"
 brew "bash"
 brew "zsh"
 brew "python"
@@ -19,9 +19,9 @@ tap "homebrew/cask-fonts"
 cask "font-inconsolata"
 cask "font-inconsolata-for-powerline"
 
-tap aws/tap
+tap "aws/tap"
 brew "aws-sam-cli"
 
 # EKSCTL - https://eksctl.io/introduction/installation/
-tap weaveworks/tap
-brew weaveworks/tap/eksctl
+tap "weaveworks/tap"
+brew "weaveworks/tap/eksctl"
