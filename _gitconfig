@@ -1,9 +1,9 @@
 [include]
-    path = dotfiles-private/gitconfig
+    path = ~/dotfiles-private/gitconfig
 
 [core]
     excludesfile = ~/.gitignore_global
-	  editor = nano
+	  editor = vim
 	  autocrlf = input
 	  hooksPath = ~/dotfiles-private/git/templates/hooks/
 
