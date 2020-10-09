@@ -71,8 +71,8 @@ if [ -d "/usr/local/opt/python/libexec/bin" ] ; then
 fi
 
 ## Golang - https://sourabhbajaj.com/mac-setup/Go/README.html
-export GOPATH=$HOME/devs/go-workspace
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
+## export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -97,3 +97,5 @@ test -e /usr/local/bin/virtualenvwrapper.sh && source /usr/local/bin/virtualenvw
 alias tf='terraform'
 
 export PATH=$HOME/.toolbox/bin:$PATH
+
+eval "$(direnv hook zsh)"
