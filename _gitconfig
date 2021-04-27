@@ -5,15 +5,14 @@
     excludesfile = ~/.gitignore_global
 	  editor = vim
 	  autocrlf = input
-	  hooksPath = ~/dotfiles-private/git/templates/hooks/
 
 [push]
     default = simple
 
 [pull]
     rebase = preserve
-[branch]
 
+[branch]
     autosetupmerge = false
 
 [status]
@@ -47,5 +46,6 @@
 
 [remote "origin"]
     prune = true
+
 [pager]
     branch = false # turn off pagination when printing the branches. see https://stackoverflow.com/questions/48341920/git-branch-command-behaves-like-less
