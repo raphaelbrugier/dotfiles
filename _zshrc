@@ -1,6 +1,18 @@
 ## source environment variables specific to the machine before anything else
 test -e  "${HOME}/.pre-hook.zsh" && source "${HOME}/.pre-hook.zsh"
 
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+   eval "$(pyenv init -)"
+fi
+
+export VIRTUALENVWRAPPER_PYTHON=~/.pyenv/versions/3.9.1/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.pyenv/versions/3.9.1/bin/virtualenv
+source ~/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
+
 ## zmodload zsh/zprof ## profile startup time
 ## zgen reset && reloadZsh after each modification
 
@@ -38,10 +50,10 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/autojump
   zgen oh-my-zsh plugins/colored-man-pages
   zgen oh-my-zsh plugins/docker
-  zgen oh-my-zsh plugins/docker-compose
+  # zgen oh-my-zsh plugins/docker-compose
   zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/golang
-  zgen oh-my-zsh plugins/mvn
+  # zgen oh-my-zsh plugins/golang
+  # zgen oh-my-zsh plugins/mvn
   zgen oh-my-zsh plugins/sudo
   # zgen oh-my-zsh plugins/kubectl
   # zgen oh-my-zsh plugins/aws #slow startup
@@ -65,9 +77,9 @@ bindkey '^[[B' history-substring-search-down
 
 # override system python with brew python
 if [ -d "/usr/local/opt/python/libexec/bin" ] ; then
-    PATH="/usr/local/opt/python/libexec/bin:$PATH"
+    #PATH="/usr/local/opt/python/libexec/bin:$PATH"
     #PATH="$HOME/Library/Python/3.6/bin:$PATH"
-    PATH="$HOME/Library/Python/3.7/bin:$PATH"
+    #PATH="$HOME/Library/Python/3.9/bin:$PATH"
 fi
 
 ## Golang - https://sourabhbajaj.com/mac-setup/Go/README.html
@@ -92,10 +104,16 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/devs
-test -e /usr/local/bin/virtualenvwrapper.sh && source /usr/local/bin/virtualenvwrapper.sh
+test -e ~/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh && source ~/.pyenv/versions/3.9.1/bin/virtualenvwrapper.sh
 
 alias tf='terraform'
 
 export PATH=$HOME/.toolbox/bin:$PATH
 
 eval "$(direnv hook zsh)"
+
+# Terragrunt version manager
+export PATH=$HOME/.tgenv/bin:$PATH
+
+export AWS_PAGER=
+
