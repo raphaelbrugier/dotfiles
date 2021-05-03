@@ -11,10 +11,11 @@
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
     ```
+
 3. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
     
 
-## Zsh && Zgen
+## Zsh && Zgenom
 
     brew install zsh
     chsh -s /bin/zsh
@@ -29,14 +30,10 @@
     
 
 ## SDKs
+  
+  See asdf
+    
 
-    curl -s "https://get.sdkman.io" | bash
-    sdk install java
-    sdk install maven
-    
 ## Python
-    
-    pip install virtualenv
-    pip install virtualenvwrapper
-    pip install awscli --upgrade --user
-    pip install --upgrade --user aws-sam-cli
+
+  
