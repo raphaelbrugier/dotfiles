@@ -22,6 +22,6 @@
 
 
 ## after installing SDKMAN:
-export SDKMAN_DIR="/Users/raphael/.sdkman"
-[[ -s "/Users/raphael/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/raphael/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="/Users/raphael/.sdkman"
+#[[ -s "/Users/raphael/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/raphael/.sdkman/bin/sdkman-init.sh"
 
