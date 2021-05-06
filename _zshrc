@@ -15,6 +15,8 @@ eval "$(asdf exec direnv hook zsh)"
 
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
+
+## silent direnv
 export DIRENV_LOG_FORMAT=""
 
 # append completions to fpath
@@ -38,7 +40,9 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/autojump
     zgenom ohmyzsh plugins/colored-man-pages
     zgenom ohmyzsh plugins/git
-    zgenom ohmyzsh plugins/sudo
+
+## Add sudo by pressing `esc` key twice - conflict with Jetbrains navigation
+#    zgenom ohmyzsh plugins/sudo
 
     zgenom load djui/alias-tips
     zgenom load zsh-users/zsh-syntax-highlighting

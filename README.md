@@ -15,11 +15,11 @@
 3. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
     
 
-## Zsh && Zgenom
+## Zsh && Zgenom && install
 
     brew install zsh
     chsh -s /bin/zsh
-    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+    git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
     ~/dotfiles/install.sh
 
 
