@@ -20,7 +20,7 @@ direnv() { asdf exec direnv "$@"; }
 export DIRENV_LOG_FORMAT=""
 
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+#fpath=(${ASDF_DIR}/completions $fpath)
 
 # use another custom folder than $ZSH/custom
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -56,5 +56,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"

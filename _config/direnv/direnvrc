@@ -1,2 +1,2 @@
 # see https://github.com/asdf-community/asdf-direnv
-source "$(asdf direnv hook asdf)"
+# source "$(asdf direnv hook asdf)"

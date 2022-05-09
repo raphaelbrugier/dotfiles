@@ -20,8 +20,9 @@
     brew install zsh
     chsh -s /bin/zsh
     git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
+    cd ~/dotfiles
     ~/dotfiles/install.sh
-
+    p10k configure
 
 ## Vim
 
@@ -29,9 +30,9 @@
     vim +PluginInstall +qall
     
 
-## SDKs
+## SDKs with asdf
   
-  See asdf
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
     
 
 ## Python
