@@ -1,3 +1,7 @@
+function a-profile() {	
+  export AWS_PROFILE=$(sed -n "s/\[profile \(.*\)\]/\1/gp" ~/.aws/config | fzf)
+}
+
 function a-whoami() {
   aws sts get-caller-identity | jq .
 }
@@ -27,7 +31,6 @@ function a-assume-role() {
 
 
 function a-assume-role-json() {
-  a_unassume_role
   export AWS_ACCESS_KEY_ID=`cat credentials.json | jq .Credentials.AccessKeyId | sed 's/"//g'`
   export AWS_SECRET_ACCESS_KEY=`cat credentials.json | jq .Credentials.SecretAccessKey | sed 's/"//g'`
   export AWS_SESSION_TOKEN=`cat credentials.json | jq .Credentials.SessionToken | sed 's/"//g'`
