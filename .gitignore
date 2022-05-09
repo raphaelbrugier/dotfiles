@@ -11,3 +11,4 @@ npm-debug.log*
 
 .idea
 /config/karabiner/automatic_backups/
+/mac/brewfiles/work/Brewfile.lock.json
