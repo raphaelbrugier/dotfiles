@@ -21,6 +21,7 @@
     cd ~/dotfiles
     ~/dotfiles/install.sh
     p10k configure
+    ./osx-install-defaults.sh
 
 ## Vim
 
@@ -32,7 +33,4 @@
   
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
     
-
-## Python
-
   
