@@ -10,7 +10,7 @@
     brew update
     ```
 
-2. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
+2. `brew bundle install --file=mac/brewfiles/BrewfileDevenv` or `brew bundle install --file=mac/brewfiles/work/Brewfile`
     
 
 ## Zsh && Zgenom && install
