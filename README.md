@@ -3,16 +3,14 @@
 
 
 ## Initial setup
-
-1. Install Xcode for gcc & make `xcode-select --install`
     
-2. Install homebrew: 
+1. Install homebrew: 
     ```
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update
     ```
 
-3. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
+2. `brew bundle install --file=mac/brewfiles/BrewfileDevenv`
     
 
 ## Zsh && Zgenom && install
