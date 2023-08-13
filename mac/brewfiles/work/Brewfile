@@ -1,5 +1,5 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
+#tap "homebrew/bundle"
+#tap "homebrew/cask"
 
 brew "coreutils"
 brew "readline"
@@ -33,3 +33,4 @@ cask "alfred"
 #cask "rectangle"
 #cask "alt-tab"
 cask "karabiner-elements"
+cask "jetbrains-toolbox"
