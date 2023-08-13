@@ -4,3 +4,4 @@
 .jira-url
 .envrc
 .direnv/*
+.tool-versions
