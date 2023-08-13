@@ -8,19 +8,25 @@ fi
 ## source environment variables specific to the machine before anything else
 test -e  "${HOME}/.pre-hook.zsh" && source "${HOME}/.pre-hook.zsh"
 
-#. $HOME/.asdf/asdf.sh
 
-# Hook direnv into your shell.
-eval "$(asdf exec direnv hook zsh)"
+# Configuring Completions in zsh
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-# A shortcut for asdf managed direnv.
-direnv() { asdf exec direnv "$@"; }
+  autoload -Uz compinit
+  compinit
+fi
 
-## silent direnv
+## load ASDF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+## load ASDF direnv integration
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+## silent direnv logs
 export DIRENV_LOG_FORMAT=""
-
-# append completions to fpath
-#fpath=(${ASDF_DIR}/completions $fpath)
 
 # use another custom folder than $ZSH/custom
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -56,6 +62,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+export PATH="/Users/raphael/.local/bin:$PATH"
