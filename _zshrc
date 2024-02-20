@@ -8,6 +8,7 @@ fi
 ## source environment variables specific to the machine before anything else
 test -e  "${HOME}/.pre-hook.zsh" && source "${HOME}/.pre-hook.zsh"
 
+export PYTHONWARNINGS=ignore::DeprecationWarning
 
 # Configuring Completions in zsh
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
