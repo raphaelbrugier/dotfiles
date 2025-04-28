@@ -1,3 +1,10 @@
 if status is-interactive
-	starship init fish | source
+
+  # remove greeting
+  set -g fish_greeting
+
+  # enable starship prompt
+	if type -q starship
+        starship init fish | source
+    end
 end
