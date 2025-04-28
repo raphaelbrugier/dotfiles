@@ -34,3 +34,5 @@
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
     
   
+Migrating to Fish + ChezMoi notes
+- https://github.com/twpayne/chezmoi/discussions/2330
