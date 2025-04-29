@@ -20,6 +20,7 @@ brew "starship"
 brew "watch"
 brew "youtube-dl"
 brew "zsh"
+brew "mise"
 
 cask "alt-tab"
 cask "docker"
