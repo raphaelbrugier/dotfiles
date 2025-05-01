@@ -6,6 +6,9 @@ if status is-interactive
   abbr -a -- gd 'git diff'
   abbr -a -- gl 'git pull'
   abbr -a -- gappend 'git commit --all --amend --no-edit'
+  abbr -a -- gf 'git fetch'
+  abbr -a -- ga 'git add'
+  abbr -a -- gaa 'git add --all'
 
   # rebase
   abbr -a -- grb 'git rebase'
