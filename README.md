@@ -13,26 +13,21 @@
 2. `brew bundle install --file=mac/brewfiles/BrewfileDevenv` or `brew bundle install --file=mac/brewfiles/work/Brewfile`
     
 
-## Zsh && Zgenom && install
+## Fish and all
 
-    brew install zsh
-    chsh -s /bin/zsh
-    git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
-    cd ~/dotfiles
-    ~/dotfiles/install.sh
-    p10k configure
-    ./osx-install-defaults.sh
+`brew install --cask ghostty`
+`brew install chezmoi`
+`brew install fish`
+`brew install starship`
+`echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells`
+`chsh -s /opt/homebrew/bin/fish`
+`fish_add_path /opt/homebrew/bin`
 
 ## Vim
 
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
-    
 
-## SDKs with asdf
-  
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.0
-    
   
 Migrating to Fish + ChezMoi notes
 - https://github.com/twpayne/chezmoi/discussions/2330
