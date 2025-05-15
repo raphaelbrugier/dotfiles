@@ -9,6 +9,7 @@ if status is-interactive
   abbr -a -- gf 'git fetch'
   abbr -a -- ga 'git add'
   abbr -a -- gaa 'git add --all'
+  abbr -a -- gco 'git checkout'
 
   # rebase
   abbr -a -- grb 'git rebase'

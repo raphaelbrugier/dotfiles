@@ -5,3 +5,4 @@
 .envrc
 .direnv/*
 .tool-versions
+mise.local.toml
