@@ -1,4 +1,5 @@
 if status is-interactive
+  abbr -a g 'git'
   abbr -a gss 'git status -s'
   abbr -a --set-cursor='%' -- gcmsg 'git commit -m "%"'
   abbr -a -- gp 'git push'
@@ -21,4 +22,15 @@ if status is-interactive
   # logs
   abbr -a --  glog 'git log --oneline --decorate --graph'
   abbr -a --  gloga  'git log --oneline --decorate --graph --all'
+
+
+  # git switch + branch picker
+  # from https://github.com/k4nar/dotfiles/blob/main/dot_config/private_fish/conf.d/git.fish#L28
+  function gcd
+      if count $argv > /dev/null
+          git switch $argv
+      else
+          git switch (git branch --sort='-authordate:iso8601' | fzf | tr -d '[:space:]')
+      end
+  end
 end
