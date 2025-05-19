@@ -3,7 +3,7 @@ if status is-interactive
   abbr -a gss 'git status -s'
   abbr -a --set-cursor='%' -- gcmsg 'git commit -m "%"'
   abbr -a -- gp 'git push'
-  abbr -a -- gpf 'git push -f'
+  abbr -a -- gpf 'git push --force-with-lease'
   abbr -a -- gd 'git diff'
   abbr -a -- gl 'git pull'
   abbr -a -- gappend 'git commit --all --amend --no-edit'
