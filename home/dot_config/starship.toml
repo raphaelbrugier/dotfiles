@@ -17,3 +17,6 @@ disabled = true
 
 [nodejs]
 disabled = true
+
+[env_var.RUNNING_ENV]
+style = "#008B8B"
