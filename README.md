@@ -31,3 +31,7 @@
   
 Migrating to Fish + ChezMoi notes
 - https://github.com/twpayne/chezmoi/discussions/2330
+
+# Using chezmoi
+
+`chezmoi apply -v`
