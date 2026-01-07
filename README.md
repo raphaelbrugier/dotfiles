@@ -35,3 +35,6 @@ Migrating to Fish + ChezMoi notes
 # Using chezmoi
 
 `chezmoi apply -v`
+
+Install chezmoi ? TBC
+`chezmoi init raphaelbrugier --apply --ssh`
