@@ -36,6 +36,9 @@ From README.md, for new machine setup:
   - Custom git aliases and functions in `_zsh_custom/git.zsh`
   - ASDF version manager integration
 - **Fish**: Modern shell config in `home/dot_config/private_fish/` with Starship prompt
+  - Git abbreviations and functions in `conf.d/git.fish`
+  - PATH management in `conf.d/path.fish` using `fish_add_path`
+  - Modular configuration using `conf.d/` directory for automatic sourcing
 - **Dual Shell Support**: Repository supports both Zsh (legacy) and Fish (current) configurations
 
 ### Configuration Management
@@ -65,6 +68,8 @@ From README.md, for new machine setup:
 - `home/dot_gitconfig.tmpl` - Main git configuration template
 - `_zshrc` - Primary Zsh configuration
 - `home/dot_config/private_fish/config.fish` - Fish shell configuration
+- `home/dot_config/private_fish/conf.d/path.fish` - Fish PATH management
+- `home/dot_config/private_fish/conf.d/git.fish` - Fish git abbreviations
 - `config/karabiner/karabiner.json.erb` - Keyboard remapping template
 - `home/dot_config/starship.toml` - Starship prompt configuration
 - `mac/brewfiles/` - Package definitions for different environments
